@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libyan Shipping Agencies Co. | Shipping & Logistics — Misrata, Libya</title>
+<meta name="description" content="Libyan Shipping Agencies Co. — full-service shipping agency in Misrata, Libya. Sea, air and land freight, customs clearance, chartering and ship supplies. Operating 24/7 since 2010.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0c1f33;
+    --navy-2:#102841;
+    --accent:#2f7ca8;
+    --accent-dk:#256688;
+    --ink:#0c1f33;
+    --body:#46586a;
+    --muted:#7b8a99;
+    --line:#e2e8ee;
+    --line-2:#d6dee6;
+    --bg:#ffffff;
+    --bg-soft:#f4f7fa;
+    --radius:6px;
+    --maxw:1180px;
+    --font:'Inter',system-ui,-apple-system,sans-serif;
+  }
+  html[lang="ar"]{ --font:'Cairo',system-ui,sans-serif; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--body);background:var(--bg);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{color:var(--ink);line-height:1.22;font-weight:700;letter-spacing:-.01em}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:var(--radius);font-weight:600;font-size:15px;cursor:pointer;border:1px solid transparent;transition:.18s;font-family:inherit;white-space:nowrap}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-dk)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+  .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+  .btn-dark{background:var(--navy);color:#fff}
+  .btn-dark:hover{background:var(--navy-2)}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;display:inline-block;margin-bottom:16px}
+  .eyebrow.on-dark{color:#6fb4d8}
+  .section{padding:96px 0}
+  .section-head{max-width:620px;margin-bottom:56px}
+  .section-head.center{margin-inline:auto;text-align:center}
+  .section-head h2{font-size:clamp(27px,3.4vw,37px);margin-bottom:14px}
+  .section-head p{color:var(--muted);font-size:17px}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy);font-size:16px;letter-spacing:-.01em}
+  .brand .mark{width:38px;height:38px;background:var(--navy);display:grid;place-items:center;flex-shrink:0;border-radius:4px}
+  .brand .mark svg{width:21px;height:21px;color:#fff}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{font-weight:500;font-size:15px;color:var(--body);transition:.18s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-actions{display:flex;align-items:center;gap:16px}
+  .lang-btn{background:none;border:1px solid var(--line-2);border-radius:4px;padding:8px 14px;font-weight:600;font-size:13.5px;color:var(--navy);cursor:pointer;font-family:inherit;transition:.18s}
+  .lang-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+  .burger span{width:24px;height:2px;background:var(--navy);transition:.2s}
+
+  /* HERO */
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;border-bottom:3px solid var(--accent)}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.5;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+  .hero-inner{position:relative;z-index:2;padding:104px 0;max-width:760px}
+  .hero .kicker{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:#6fb4d8;font-weight:600;margin-bottom:22px;display:flex;align-items:center;gap:12px}
+  .hero .kicker::before{content:"";width:34px;height:1px;background:#6fb4d8;display:inline-block}
+  .hero h1{color:#fff;font-size:clamp(33px,5vw,56px);font-weight:700;margin-bottom:24px;letter-spacing:-.02em;line-height:1.1}
+  .hero h1 .hl{color:#6fb4d8}
+  .hero p.lead{font-size:clamp(16.5px,1.9vw,19px);color:rgba(255,255,255,.78);margin-bottom:38px;max-width:580px;font-weight:400}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:0;margin-top:70px;border-top:1px solid rgba(255,255,255,.14);padding-top:34px;flex-wrap:wrap}
+  .hero-stats .stat{padding-inline-end:48px;margin-inline-end:48px;border-inline-end:1px solid rgba(255,255,255,.14)}
+  .hero-stats .stat:last-child{border:none;margin:0;padding:0}
+  .hero-stats .stat .n{font-size:30px;font-weight:700;color:#fff;letter-spacing:-.01em}
+  .hero-stats .stat .l{font-size:13.5px;color:rgba(255,255,255,.62);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+
+  /* TRUST STRIP */
+  .strip{background:var(--bg-soft);border-bottom:1px solid var(--line);padding:30px 0}
+  .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .strip-item{display:flex;align-items:center;gap:13px;color:var(--navy);font-weight:600;font-size:14.5px}
+  .strip-item svg{width:22px;height:22px;color:var(--accent);flex-shrink:0}
+
+  /* SERVICES */
+  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .svc{padding:34px 28px;border-inline-end:1px solid var(--line);border-bottom:1px solid var(--line);transition:.18s;background:#fff}
+  .svc:hover{background:var(--bg-soft)}
+  .svc .ico{width:40px;height:40px;display:grid;place-items:center;margin-bottom:20px;color:var(--accent)}
+  .svc .ico svg{width:30px;height:30px}
+  .svc h3{font-size:17px;margin-bottom:10px;color:var(--navy)}
+  .svc p{font-size:14px;color:var(--muted);line-height:1.65}
+  .services-grid .svc:nth-child(4n){border-inline-end:none}
+  .services-grid .svc:nth-child(n+5){border-bottom:none}
+
+  /* ABOUT */
+  .about{background:var(--bg-soft);border-block:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .about-text h2{font-size:clamp(25px,3.2vw,35px);margin-bottom:20px}
+  .about-text p{margin-bottom:18px;font-size:16px}
+  .feat-list{list-style:none;margin-top:26px;display:grid;gap:16px}
+  .feat-list li{display:flex;gap:13px;align-items:flex-start;font-weight:500;color:var(--ink);font-size:15.5px}
+  .feat-list svg{width:20px;height:20px;color:var(--accent);flex-shrink:0;margin-top:3px}
+  .about-panel{background:var(--navy);border-radius:var(--radius);padding:8px;border-top:3px solid var(--accent)}
+  .panel-grid{display:grid;grid-template-columns:1fr 1fr}
+  .panel-grid .pg{padding:34px 30px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .panel-grid .pg:nth-child(odd){border-inline-end:1px solid rgba(255,255,255,.1)}
+  .panel-grid .pg:nth-child(n+3){border-bottom:none}
+  .panel-grid .pg .n{font-size:32px;font-weight:700;color:#fff;letter-spacing:-.01em}
+  .panel-grid .pg .l{font-size:13.5px;color:#9fb4c6;margin-top:6px;line-height:1.4}
+
+  /* WHY */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+  .why-item{border-top:2px solid var(--navy);padding-top:22px}
+  .why-item .wn{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.08em;margin-bottom:12px}
+  .why-item h3{font-size:17.5px;margin-bottom:10px;color:var(--navy)}
+  .why-item p{font-size:14.5px;color:var(--muted)}
+
+  /* CTA */
+  .cta-band{background:var(--navy);color:#fff;border-radius:var(--radius);padding:56px 48px;display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;border-inline-start:3px solid var(--accent)}
+  .cta-band h2{color:#fff;font-size:clamp(23px,3vw,32px);margin-bottom:8px}
+  .cta-band p{color:rgba(255,255,255,.72);font-size:16.5px}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .contact-info h2{font-size:clamp(25px,3.2vw,35px);margin-bottom:16px}
+  .contact-info>p{color:var(--muted);margin-bottom:34px;font-size:16px}
+  .ci-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+  .ci-item .ci-ico{width:44px;height:44px;border:1px solid var(--line-2);border-radius:var(--radius);display:grid;place-items:center;flex-shrink:0}
+  .ci-item .ci-ico svg{width:20px;height:20px;color:var(--accent)}
+  .ci-item .ci-l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:2px}
+  .ci-item .ci-v{font-size:16px;color:var(--ink);font-weight:600}
+  .wa-btn{background:#1f8f4e;color:#fff;margin-top:8px}
+  .wa-btn:hover{background:#1a7a42}
+  .form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:36px}
+  .form .fg{margin-bottom:18px}
+  .form label{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:7px}
+  .form input,.form select,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--line-2);border-radius:var(--radius);font-size:15px;font-family:inherit;color:var(--ink);background:#fff;transition:.18s}
+  .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,124,168,.12)}
+  .form textarea{resize:vertical;min-height:112px}
+  .form .btn{width:100%;justify-content:center}
+  .form-ok{display:none;background:#eef7f1;border:1px solid #bfe0cb;color:#1f6b3f;border-radius:var(--radius);padding:15px;text-align:center;font-weight:600}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1.2fr;gap:48px;margin-bottom:48px}
+  .foot-brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:17px;margin-bottom:18px}
+  .foot-brand .mark{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:4px;display:grid;place-items:center}
+  .foot-brand .mark svg{width:19px;height:19px;color:#6fb4d8}
+  .foot-col p{font-size:14.5px;max-width:320px;color:rgba(255,255,255,.62)}
+  .foot-col h4{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
+  .foot-col ul{list-style:none;display:grid;gap:11px}
+  .foot-col ul a,.foot-col ul span{font-size:14.5px;color:rgba(255,255,255,.62);transition:.18s}
+  .foot-col ul a:hover{color:#6fb4d8}
+  .socials{display:flex;gap:10px;margin-top:20px}
+  .socials a{width:36px;height:36px;border:1px solid rgba(255,255,255,.14);border-radius:4px;display:grid;place-items:center;transition:.18s;color:rgba(255,255,255,.7)}
+  .socials a:hover{border-color:var(--accent);color:#fff;background:var(--accent)}
+  .socials a svg{width:17px;height:17px}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.45)}
+
+  @media(max-width:900px){
+    .services-grid,.strip-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
+    .services-grid .svc:nth-child(2n){border-inline-end:none}
+    .services-grid .svc{border-bottom:1px solid var(--line)!important}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .why-grid{gap:28px 32px}
+    .cta-band{flex-direction:column;align-items:flex-start}
+    .nav-links{position:fixed;top:72px;inset-inline:0;background:#fff;flex-direction:column;align-items:flex-start;padding:22px 28px;gap:20px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.3s;z-index:90}
+    .nav-links.open{transform:translateY(0)}
+    .burger{display:flex}
+    .section{padding:68px 0}
+    .hero-inner{padding:76px 0}
+  }
+  @media(max-width:560px){
+    .services-grid,.strip-grid,.why-grid,.panel-grid{grid-template-columns:1fr}
+    .strip-grid{gap:18px}
+    .hero-stats .stat{border:none;padding:0;margin:0 40px 0 0}
+    .nav-actions .label-full{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="brand">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2c1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10V2"/></svg></span>
+      <span data-i18n="brand">Libyan Shipping Agencies</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#why" data-i18n="nav_why">Why Us</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">العربية</button>
+      <a href="#contact" class="btn btn-dark label-full" data-i18n="nav_cta">Request a Quote</a>
+      <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div class="kicker"><span data-i18n="hero_badge">Misrata, Libya · Operating 24/7</span></div>
+    <h1 data-i18n="hero_h1">Your shipping partner at every <span class="hl">Libyan port</span></h1>
+    <p class="lead" data-i18n="hero_lead">A full-service shipping agency representing ship owners and charterers — handling vessels, cargo, customs and supplies from arrival to departure. Established 2010.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary" data-i18n="hero_cta1">Request a Quote</a>
+      <a href="#services" class="btn btn-outline" data-i18n="hero_cta2">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="n">2010</div><div class="l" data-i18n="stat_since">Established</div></div>
+      <div class="stat"><div class="n">24/7</div><div class="l" data-i18n="stat_ops">Operations</div></div>
+      <div class="stat"><div class="n">8</div><div class="l" data-i18n="stat_serv">Core services</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap strip-grid">
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span data-i18n="trust1">Licensed agency</span></div>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-i18n="trust2">Round-the-clock support</span></div>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span data-i18n="trust3">Full cargo handling</span></div>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="trust4">All Libyan ports</span></div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="serv_eyebrow">What we do</span>
+      <h2 data-i18n="serv_h2">Complete shipping & logistics services</h2>
+      <p data-i18n="serv_sub">One partner for every stage of your cargo's journey — from booking to final delivery and clearance.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <span class="eyebrow" data-i18n="about_eyebrow">About the agency</span>
+      <h2 data-i18n="about_h2">Experienced hands at every Libyan port</h2>
+      <p data-i18n="about_p1">Libyan Shipping Agencies Co. was established in 2010 and built by a team with deep roots in the freight forwarding industry. We represent ship owners and charterers, managing their vessels and cargo from arrival to departure.</p>
+      <p data-i18n="about_p2">From our base in Misrata we coordinate clearance, supplies and transport nationwide — moving quickly so your vessels never wait longer than they have to.</p>
+      <ul class="feat-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="about_f1">Local expertise across Libyan ports and customs</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="about_f2">A single point of contact for owners and charterers</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="about_f3">Fast, reliable response — 24 hours a day</span></li>
+      </ul>
+    </div>
+    <div class="about-panel">
+      <div class="panel-grid">
+        <div class="pg"><div class="n">2010</div><div class="l" data-i18n="panel1">Year established</div></div>
+        <div class="pg"><div class="n">24/7</div><div class="l" data-i18n="panel2">Operational support</div></div>
+        <div class="pg"><div class="n">8</div><div class="l" data-i18n="panel3">Core service lines</div></div>
+        <div class="pg"><div class="n">All</div><div class="l" data-i18n="panel4">Libyan ports covered</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="why_eyebrow">Why choose us</span>
+      <h2 data-i18n="why_h2">Built for owners who need things done right</h2>
+    </div>
+    <div class="why-grid" id="whyGrid"></div>
+  </div>
+</section>
+
+<section style="padding:0 0 96px">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2 data-i18n="ctaband_h">Have a vessel calling at a Libyan port?</h2>
+        <p data-i18n="ctaband_p">Send us your requirements and we'll respond with a clear quote — fast.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary" data-i18n="ctaband_btn">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow" data-i18n="contact_eyebrow">Contact</span>
+      <h2 data-i18n="contact_h2">Let's move your cargo</h2>
+      <p data-i18n="contact_sub">Reach us any time — we operate around the clock. Call, message on WhatsApp, or send the form and we'll reply quickly.</p>
+
+      <div class="ci-item">
+        <span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <div><div class="ci-l" data-i18n="contact_phone_l">Phone</div><div class="ci-v" dir="ltr">+218 92 318 1930</div></div>
+      </div>
+      <div class="ci-item">
+        <span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+        <div><div class="ci-l" data-i18n="contact_email_l">Email</div><div class="ci-v" dir="ltr">info@libyanshipping.com</div></div>
+      </div>
+      <div class="ci-item">
+        <span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div><div class="ci-l" data-i18n="contact_addr_l">Address</div><div class="ci-v" data-i18n="contact_addr_v">Downtown Tower, Al Jama' Al'Ali St., Misrata, Libya</div></div>
+      </div>
+      <a href="https://wa.me/218923181930" target="_blank" rel="noopener" class="btn wa-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2.1-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg>
+        <span data-i18n="contact_wa">Message us on WhatsApp</span>
+      </a>
+    </div>
+
+    <form class="form" id="quoteForm" onsubmit="return submitForm(event)">
+      <div class="fg"><label data-i18n="f_name">Full name</label><input type="text" name="name" required data-i18n-ph="f_name_ph" placeholder="Your name"></div>
+      <div class="fg"><label data-i18n="f_company">Company</label><input type="text" name="company" data-i18n-ph="f_company_ph" placeholder="Company name"></div>
+      <div class="fg"><label data-i18n="f_email">Email or phone</label><input type="text" name="contact" required data-i18n-ph="f_email_ph" placeholder="How we reach you"></div>
+      <div class="fg"><label data-i18n="f_service">Service needed</label><select name="service" id="fService"></select></div>
+      <div class="fg"><label data-i18n="f_msg">Details</label><textarea name="message" data-i18n-ph="f_msg_ph" placeholder="Tell us about your vessel or cargo..."></textarea></div>
+      <button type="submit" class="btn btn-primary" data-i18n="f_submit">Send request</button>
+      <div class="form-ok" id="formOk" data-i18n="f_ok">Thank you — we've received your request and will be in touch shortly.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2c1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10V2"/></svg></span><span data-i18n="brand">Libyan Shipping Agencies</span></div>
+        <p data-i18n="foot_about">Full-service shipping agency based in Misrata, Libya. Representing ship owners and charterers with reliable, round-the-clock cargo handling since 2010.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.8l-4.8-6.3L5.9 22H2.8l8-9.2L2 2h6.9l4.3 5.7zm-1.2 18h1.7L7.4 3.8H5.6z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot_links">Quick links</h4>
+        <ul>
+          <li><a href="#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#why" data-i18n="nav_why">Why Us</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot_reach">Get in touch</h4>
+        <ul>
+          <li><a href="tel:+218923181930" dir="ltr">+218 92 318 1930</a></li>
+          <li><a href="mailto:info@libyanshipping.com" dir="ltr">info@libyanshipping.com</a></li>
+          <li><span data-i18n="contact_addr_v">Downtown Tower, Misrata, Libya</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Libyan Shipping Agencies Co. <span data-i18n="foot_rights">All rights reserved.</span></span>
+      <span data-i18n="foot_made">Shipping & logistics · Misrata, Libya</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  en:{
+    brand:"Libyan Shipping Agencies",
+    nav_services:"Services", nav_about:"About", nav_why:"Why Us", nav_contact:"Contact", nav_cta:"Request a Quote",
+    hero_badge:"Misrata, Libya · Operating 24/7",
+    hero_h1:'Your shipping partner at every <span class="hl">Libyan port</span>',
+    hero_lead:"A full-service shipping agency representing ship owners and charterers — handling vessels, cargo, customs and supplies from arrival to departure. Established 2010.",
+    hero_cta1:"Request a Quote", hero_cta2:"Our Services",
+    stat_since:"Established", stat_ops:"Operations", stat_serv:"Core services",
+    trust1:"Licensed agency", trust2:"Round-the-clock support", trust3:"Full cargo handling", trust4:"All Libyan ports",
+    serv_eyebrow:"What we do", serv_h2:"Complete shipping & logistics services",
+    serv_sub:"One partner for every stage of your cargo's journey — from booking to final delivery and clearance.",
+    about_eyebrow:"About the agency", about_h2:"Experienced hands at every Libyan port",
+    about_p1:"Libyan Shipping Agencies Co. was established in 2010 and built by a team with deep roots in the freight forwarding industry. We represent ship owners and charterers, managing their vessels and cargo from arrival to departure.",
+    about_p2:"From our base in Misrata we coordinate clearance, supplies and transport nationwide — moving quickly so your vessels never wait longer than they have to.",
+    about_f1:"Local expertise across Libyan ports and customs",
+    about_f2:"A single point of contact for owners and charterers",
+    about_f3:"Fast, reliable response — 24 hours a day",
+    panel1:"Year established", panel2:"Operational support", panel3:"Core service lines", panel4:"Libyan ports covered",
+    why_eyebrow:"Why choose us", why_h2:"Built for owners who need things done right",
+    ctaband_h:"Have a vessel calling at a Libyan port?",
+    ctaband_p:"Send us your requirements and we'll respond with a clear quote — fast.",
+    ctaband_btn:"Get in touch",
+    contact_eyebrow:"Contact", contact_h2:"Let's move your cargo",
+    contact_sub:"Reach us any time — we operate around the clock. Call, message on WhatsApp, or send the form and we'll reply quickly.",
+    contact_phone_l:"Phone", contact_email_l:"Email", contact_addr_l:"Address",
+    contact_addr_v:"Downtown Tower, Al Jama' Al'Ali St., Misrata, Libya",
+    contact_wa:"Message us on WhatsApp",
+    f_name:"Full name", f_name_ph:"Your name", f_company:"Company", f_company_ph:"Company name",
+    f_email:"Email or phone", f_email_ph:"How we reach you", f_service:"Service needed",
+    f_msg:"Details", f_msg_ph:"Tell us about your vessel or cargo...", f_submit:"Send request",
+    f_ok:"Thank you — we've received your request and will be in touch shortly.",
+    foot_about:"Full-service shipping agency based in Misrata, Libya. Representing ship owners and charterers with reliable, round-the-clock cargo handling since 2010.",
+    foot_links:"Quick links", foot_reach:"Get in touch", foot_rights:"All rights reserved.",
+    foot_made:"Shipping & logistics · Misrata, Libya",
+    services:[
+      {t:"Sea Freight",d:"Vessel handling and ocean cargo for every type of shipment, FCL and LCL, at all major Libyan ports."},
+      {t:"Air Freight",d:"Fast air cargo forwarding for time-sensitive and high-value shipments, in and out of Libya."},
+      {t:"Land Transport",d:"Reliable inland trucking and distribution connecting ports to destinations nationwide."},
+      {t:"Multimodal Transport",d:"Seamless door-to-door movement combining sea, air and road under one coordinated plan."},
+      {t:"Customs Clearance",d:"Full import and export clearance handled by our team so your cargo moves without delay."},
+      {t:"Ship Chandling & Supplies",d:"Provisions, stores and technical supplies delivered to vessels at berth or anchorage."},
+      {t:"Chartering & Brokerage",d:"Matching cargo with the right tonnage and negotiating terms for owners and charterers."},
+      {t:"Shipping & Protective Agency",d:"Representing owners' interests in port and protecting your vessel throughout its call."}
+    ],
+    why:[
+      {t:"24/7 availability",d:"Vessels don't keep office hours and neither do we. Reach a real person any hour of the day."},
+      {t:"One point of contact",d:"No chasing between departments — one coordinator owns your shipment end to end."},
+      {t:"Port-level knowledge",d:"Years of working Libyan ports and customs means fewer surprises and faster turnarounds."},
+      {t:"Clear communication",d:"Straight answers and timely updates, in Arabic or English, at every step of the call."}
+    ]
+  },
+  ar:{
+    brand:"الوكالات الملاحية الليبية",
+    nav_services:"خدماتنا", nav_about:"من نحن", nav_why:"لماذا نحن", nav_contact:"اتصل بنا", nav_cta:"اطلب عرض سعر",
+    hero_badge:"مصراتة، ليبيا · نعمل على مدار الساعة",
+    hero_h1:'شريكك في الشحن في كل <span class="hl">ميناء ليبي</span>',
+    hero_lead:"وكالة ملاحية متكاملة الخدمات تمثّل مالكي السفن والمستأجرين — نتولى السفن والبضائع والتخليص والتموين من الوصول حتى المغادرة. تأسست عام 2010.",
+    hero_cta1:"اطلب عرض سعر", hero_cta2:"خدماتنا",
+    stat_since:"تأسست", stat_ops:"على مدار الساعة", stat_serv:"خدمات أساسية",
+    trust1:"وكالة مرخصة", trust2:"دعم على مدار الساعة", trust3:"مناولة كاملة للبضائع", trust4:"كل الموانئ الليبية",
+    serv_eyebrow:"ماذا نقدم", serv_h2:"خدمات شحن ولوجستيات متكاملة",
+    serv_sub:"شريك واحد لكل مرحلة من رحلة بضاعتك — من الحجز حتى التسليم النهائي والتخليص.",
+    about_eyebrow:"عن الوكالة", about_h2:"خبرة راسخة في كل ميناء ليبي",
+    about_p1:"تأسست شركة الوكالات الملاحية الليبية عام 2010 على يد فريق يمتلك جذوراً عميقة في مجال الشحن والتخليص. نمثّل مالكي السفن والمستأجرين، ونتولى إدارة سفنهم وبضائعهم من الوصول حتى المغادرة.",
+    about_p2:"من مقرنا في مصراتة ننسّق التخليص والتموين والنقل في جميع أنحاء البلاد — بسرعة تضمن ألا تنتظر سفنك أكثر مما يلزم.",
+    about_f1:"خبرة محلية في الموانئ والجمارك الليبية",
+    about_f2:"نقطة تواصل واحدة للمالكين والمستأجرين",
+    about_f3:"استجابة سريعة وموثوقة — 24 ساعة يومياً",
+    panel1:"سنة التأسيس", panel2:"دعم تشغيلي", panel3:"خطوط خدمة أساسية", panel4:"تغطية الموانئ الليبية",
+    why_eyebrow:"لماذا نحن", why_h2:"مصمّمة لمن يريد إنجاز الأمور بشكل صحيح",
+    ctaband_h:"هل لديك سفينة قادمة إلى ميناء ليبي؟",
+    ctaband_p:"أرسل لنا متطلباتك وسنرد عليك بعرض سعر واضح — بسرعة.",
+    ctaband_btn:"تواصل معنا",
+    contact_eyebrow:"اتصل بنا", contact_h2:"لننقل بضاعتك",
+    contact_sub:"تواصل معنا في أي وقت — نعمل على مدار الساعة. اتصل بنا، راسلنا على واتساب، أو أرسل النموذج وسنرد عليك بسرعة.",
+    contact_phone_l:"الهاتف", contact_email_l:"البريد الإلكتروني", contact_addr_l:"العنوان",
+    contact_addr_v:"برج الداون تاون، شارع الجامع العالي، مصراتة، ليبيا",
+    contact_wa:"راسلنا على واتساب",
+    f_name:"الاسم الكامل", f_name_ph:"اسمك", f_company:"الشركة", f_company_ph:"اسم الشركة",
+    f_email:"البريد الإلكتروني أو الهاتف", f_email_ph:"كيف نتواصل معك", f_service:"الخدمة المطلوبة",
+    f_msg:"التفاصيل", f_msg_ph:"أخبرنا عن سفينتك أو بضاعتك...", f_submit:"إرسال الطلب",
+    f_ok:"شكراً لك — تم استلام طلبك وسنتواصل معك قريباً.",
+    foot_about:"وكالة ملاحية متكاملة الخدمات مقرها مصراتة، ليبيا. نمثّل مالكي السفن والمستأجرين بمناولة موثوقة للبضائع على مدار الساعة منذ عام 2010.",
+    foot_links:"روابط سريعة", foot_reach:"تواصل معنا", foot_rights:"جميع الحقوق محفوظة.",
+    foot_made:"شحن ولوجستيات · مصراتة، ليبيا",
+    services:[
+      {t:"الشحن البحري",d:"مناولة السفن والبضائع البحرية لكل أنواع الشحنات، حاويات كاملة وجزئية، في جميع الموانئ الليبية الرئيسية."},
+      {t:"الشحن الجوي",d:"شحن جوي سريع للشحنات العاجلة وعالية القيمة، من وإلى ليبيا."},
+      {t:"النقل البري",d:"نقل بري داخلي موثوق وتوزيع يربط الموانئ بالوجهات في كل أنحاء البلاد."},
+      {t:"النقل متعدد الوسائط",d:"نقل سلس من الباب إلى الباب يجمع بين البحر والجو والبر ضمن خطة واحدة منسّقة."},
+      {t:"التخليص الجمركي",d:"تخليص كامل للاستيراد والتصدير يتولاه فريقنا حتى تتحرك بضاعتك دون تأخير."},
+      {t:"تموين السفن والإمدادات",d:"مؤن ومخزونات وإمدادات فنية تُسلّم للسفن على الرصيف أو في المرسى."},
+      {t:"تأجير السفن والوساطة",d:"مطابقة البضائع مع الحمولة المناسبة والتفاوض على الشروط للمالكين والمستأجرين."},
+      {t:"الوكالة الملاحية والحمائية",d:"تمثيل مصالح المالكين في الميناء وحماية سفينتك طوال فترة رسوّها."}
+    ],
+    why:[
+      {t:"متاحون 24/7",d:"السفن لا تلتزم بساعات العمل ونحن كذلك. تواصل مع شخص حقيقي في أي ساعة من اليوم."},
+      {t:"نقطة تواصل واحدة",d:"لا تنقّل بين الأقسام — منسّق واحد يتولى شحنتك من البداية إلى النهاية."},
+      {t:"معرفة بالموانئ",d:"سنوات من العمل في الموانئ والجمارك الليبية تعني مفاجآت أقل وإنجازاً أسرع."},
+      {t:"تواصل واضح",d:"إجابات مباشرة وتحديثات في وقتها، بالعربية أو الإنجليزية، في كل خطوة."}
+    ]
+  }
+};
+
+let LANG="en";
+const svcIcons=[
+  '<path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2c1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10V2"/>',
+  '<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
+  '<path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>',
+  '<path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>',
+  '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/>',
+  '<path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01"/>',
+  '<path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M21 3l-7 7"/><path d="M3 3l7 7"/><path d="M12 22a5 5 0 0 0 5-5c0-2-2-5-5-8-3 3-5 6-5 8a5 5 0 0 0 5 5z"/>',
+  '<path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/>'
+];
+
+function renderCards(){
+  const d=I18N[LANG];
+  document.getElementById('servicesGrid').innerHTML=d.services.map((s,i)=>
+    `<div class="svc"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${svcIcons[i]}</svg></div><h3>${s.t}</h3><p>${s.d}</p></div>`).join('');
+  document.getElementById('whyGrid').innerHTML=d.why.map((s,i)=>
+    `<div class="why-item"><div class="wn">0${i+1}</div><h3>${s.t}</h3><p>${s.d}</p></div>`).join('');
+  document.getElementById('fService').innerHTML=d.services.map(s=>`<option>${s.t}</option>`).join('');
+}
+function applyLang(){
+  const d=I18N[LANG];
+  document.documentElement.lang=LANG;
+  document.documentElement.dir=LANG==='ar'?'rtl':'ltr';
+  document.getElementById('langBtn').textContent=LANG==='ar'?'English':'العربية';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(d[k]!==undefined)el.innerHTML=d[k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph');if(d[k]!==undefined)el.placeholder=d[k];});
+  renderCards();
+}
+function toggleLang(){ LANG=LANG==='ar'?'en':'ar'; applyLang(); }
+function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
+function submitForm(e){ e.preventDefault(); document.getElementById('quoteForm').querySelector('.btn').style.display='none'; document.getElementById('formOk').style.display='block'; return false; }
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+applyLang();
+</script>
+</body>
+</html>
