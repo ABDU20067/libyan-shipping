@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service — Libyan Shipping Agencies Co.</title>
+<meta name="description" content="Request a quote for sea, air, land or multi-modal freight, customs clearance, ship chandling, chartering, or port agency services from Libyan Shipping Agencies Co., Misrata.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1d2228;--navy-2:#272d35;--accent:#2e8b7f;--accent-dk:#24726a;
+    --ink:#1d2228;--body:#4a5058;--muted:#7a8088;--line:#e5e7ea;--line-2:#d8dbdf;
+    --bg:#fff;--bg-soft:#f5f6f8;--radius:6px;--maxw:1080px;--font:'Inter',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--body);background:var(--bg);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{color:var(--ink);line-height:1.25;font-weight:700;letter-spacing:-.01em}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:var(--radius);font-weight:600;font-size:15px;cursor:pointer;border:1px solid transparent;transition:.18s;font-family:inherit}
+  .btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-dk)}
+
+  header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1180px;margin:0 auto;padding:0 28px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy);font-size:16px}
+  .brand img{height:46px;width:auto;display:block}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-weight:500;font-size:15px;color:var(--body);transition:.18s}
+  .nav-links a:hover{color:var(--accent)}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  .masthead{position:relative;background:linear-gradient(rgba(29,34,40,.85),rgba(29,34,40,.9)),url("https://images.unsplash.com/photo-1618317497044-cf78ada06f92?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat,var(--navy);color:#fff;border-bottom:3px solid var(--accent);padding:60px 0 54px}
+  .crumb{font-size:13px;color:#9aa7b2;margin-bottom:16px}
+  .crumb a:hover{color:#7ec8bd}
+  .crumb .sep{margin:0 8px;opacity:.6}
+  .mast-row{display:flex;align-items:center;gap:16px}
+  .mast-ico{width:52px;height:52px;border:1.5px solid rgba(126,200,189,.5);border-radius:var(--radius);display:grid;place-items:center;flex-shrink:0;color:#7ec8bd}
+  .mast-ico svg{width:28px;height:28px}
+  .masthead h1{color:#fff;font-size:clamp(26px,4vw,38px)}
+  .masthead .tagline{color:rgba(255,255,255,.78);font-size:17px;margin-top:10px;max-width:620px}
+
+  main{padding:56px 0 20px}
+  .layout{display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:start}
+  @media(max-width:860px){.layout{grid-template-columns:1fr;gap:38px}}
+  .intro p{margin-bottom:16px;font-size:16px}
+  .intro h3{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:26px 0 14px}
+  .feat{list-style:none;display:grid;gap:13px}
+  .feat li{position:relative;padding-left:26px;font-weight:500;color:var(--ink)}
+  .feat li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--accent);border-radius:50%}
+  .help{margin-top:30px;background:var(--bg-soft);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);padding:18px 20px;font-size:14.5px}
+  .help a{color:var(--accent);font-weight:600}
+
+  .formcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:0 14px 40px rgba(29,34,40,.07);border-top:3px solid var(--accent)}
+  .formcard h2{font-size:21px;margin-bottom:6px}
+  .formcard .fsub{color:var(--muted);font-size:14px;margin-bottom:22px}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .fg{display:flex;flex-direction:column}
+  .fg.full{grid-column:1 / -1}
+  label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
+  label .req{color:var(--accent)}
+  input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line-2);border-radius:var(--radius);font-size:14.5px;font-family:inherit;color:var(--ink);background:#fff;transition:.18s}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(46,139,127,.12)}
+  textarea{resize:vertical;min-height:92px}
+  .formcard .btn{width:100%;justify-content:center;margin-top:8px}
+  .ok{display:none;background:#eef7f1;border:1px solid #bfe0cb;color:#1f6b3f;border-radius:var(--radius);padding:22px;text-align:center}
+  .ok strong{display:block;font-size:17px;margin-bottom:6px;color:#1a5c37}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.7);padding:46px 0;margin-top:50px}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+  .foot a{color:#7ec8bd}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="brand"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=240,fit=crop/AQEe7PyvMNUG5OR0/logo700ppi-07-A3QlqVQ8wPUkNyP1.webp" alt="Libyan Shipping Agencies Co. logo"><span>Libyan Shipping Agencies</span></a>
+    <div class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="guide.html">Ports Guide</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="masthead">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a><span class="sep">/</span><a href="index.html#services">Services</a><span class="sep">/</span><span id="crumbNow">Service</span></div>
+    <div class="mast-row">
+      <span class="mast-ico" id="mastIco"></span>
+      <div>
+        <h1 id="svcTitle">Service</h1>
+        <div class="tagline" id="svcTagline"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap layout">
+    <div class="intro">
+      <div id="introBody"></div>
+      <h3>What we handle</h3>
+      <ul class="feat" id="featList"></ul>
+      <div class="help">Not sure which option fits? Call or WhatsApp us on <strong>+218&nbsp;92&nbsp;318&nbsp;1930</strong> or email <a href="mailto:info@libyanshipping.com">info@libyanshipping.com</a> — we'll guide you.</div>
+    </div>
+
+    <div>
+      <form class="formcard" id="svcForm" onsubmit="return submitForm(event)">
+        <h2 id="formTitle">Request a Quote</h2>
+        <div class="fsub">Fields marked <span style="color:var(--accent)">*</span> are required. We'll reply with a quote as soon as possible.</div>
+        <div class="fgrid" id="fieldGrid"></div>
+        <button type="submit" class="btn btn-primary">Send request</button>
+      </form>
+      <div class="formcard ok" id="okMsg"><strong>Thank you — your request has been received.</strong>Our team will review it and get back to you shortly. For anything urgent, reach us on WhatsApp at +218 92 318 1930.</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="y"></span> Libyan Shipping Agencies Co. · All rights reserved.</span>
+    <span><a href="index.html">← Back to home</a></span>
+  </div>
+</footer>
+
+<script>
+const ICON = {
+  ship:'<path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2c1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10V2"/>',
+  plane:'<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
+  truck:'<path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>',
+  layers:'<path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>',
+  doc:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/>',
+  box:'<path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01"/>',
+  swap:'<path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M21 3l-7 7"/><path d="M3 3l7 7"/><path d="M12 22a5 5 0 0 0 5-5c0-2-2-5-5-8-3 3-5 6-5 8a5 5 0 0 0 5 5z"/>',
+  anchor:'<path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/>'
+};
+// field helpers
+const F={
+  name:{n:'name',l:'Full name',t:'text',req:1},
+  company:{n:'company',l:'Company name',t:'text'},
+  email:{n:'email',l:'Email',t:'email',req:1},
+  phone:{n:'phone',l:'Phone number',t:'tel',req:1},
+  desc:{n:'desc',l:'Shipment description',t:'textarea',req:1,full:1},
+  origin:{n:'origin',l:'Shipment origin',t:'text',req:1},
+  dest:{n:'dest',l:'Shipment destination',t:'text',req:1},
+  pickup:{n:'pickup',l:'Pickup location (for EXW only)',t:'text'},
+  qty:{n:'qty',l:'Quantity',t:'text',req:1},
+  notes:{n:'notes',l:'Additional info',t:'textarea',full:1}
+};
+const PACK_SEA=['Container 20ft','Container 40ft','Container 40ft HQ','Container 45ft HQ','Out Of Gauge (OOG)','Break Bulk (BBK)','Project Cargo','RORO','Drums','Bales','General Cargo','Dry Bulk','Other'];
+const PACK_LAND=['Container 20ft','Container 40ft','Container 40ft HQ','Container 45ft HQ','Project Cargo','Drums','Bales','General Cargo','Dry Bulk','Other'];
+const PACK_AIR=['Bags and Bundles','Pallets','Boxes','Crates','Drums','Other'];
+const INCO_FULL=['FOB','EXW','FCA','FAS','CFR','CIF','CPT','CIP','DAF','DAP','DES','DEQ','DDP'];
+const INCO_AIR=['FOB','EXW','FCA','FAS','CFR','CIF','CPT','CIP','DAP','DDP'];
+const INCO_LAND=['FOB','EXW','CFR','CIF','DAP','DDP'];
+
+const SVC={
+  'sea-freight':{title:'Sea Freight',icon:'ship',tagline:'Vessel handling and ocean cargo at every major Libyan port.',
+    intro:['We arrange and oversee ocean shipments of every kind — full container loads, part loads, break-bulk and project cargo — and attend your vessel from arrival to departure at every major Libyan port.'],
+    feat:['FCL and LCL booking','Break-bulk, RORO and project cargo','Vessel attendance and berth coordination','Bills of lading and documentation','Port-to-door delivery'],
+    formTitle:'Request a Sea Freight Quote',
+    fields:[F.name,F.company,F.email,F.phone,F.desc,F.origin,F.dest,{n:'packing',l:'How is your cargo packed?',t:'select',req:1,o:PACK_SEA},{n:'incoterm',l:'Incoterm',t:'select',req:1,o:INCO_FULL},F.pickup,F.qty,{n:'weight',l:'Weight',t:'text',req:1},F.notes]},
+  'air-freight':{title:'Air Freight',icon:'plane',tagline:'Fast, reliable air cargo in and out of Libya.',
+    intro:['Fast air cargo forwarding for time-sensitive and high-value shipments, in and out of Libya, with clearance and door delivery handled end to end.'],
+    feat:['Import and export air consignments','Time-critical and AOG shipments','Consolidation and part loads','Airport clearance and handling','Door delivery'],
+    formTitle:'Request an Air Freight Quote',
+    fields:[F.name,F.company,F.email,F.phone,F.desc,F.origin,F.dest,{n:'packing',l:'How is your cargo packed?',t:'select',req:1,o:PACK_AIR},F.qty,{n:'weight',l:'Weight',t:'text'},{n:'incoterm',l:'Incoterm',t:'select',req:1,o:INCO_AIR},F.pickup,F.notes]},
+  'land-freight':{title:'Land Transport',icon:'truck',tagline:'Inland trucking and distribution across Libya.',
+    intro:['Reliable inland trucking and distribution connecting Libyan ports to destinations nationwide, for full loads, part loads and oversized cargo.'],
+    feat:['Port-to-site haulage','Full and part loads','Heavy and oversized cargo','Nationwide coverage','Cargo tracking'],
+    formTitle:'Request a Land Transport Quote',
+    fields:[F.name,F.company,F.email,F.phone,F.desc,F.origin,F.dest,{n:'packing',l:'How is your cargo packed?',t:'select',req:1,o:PACK_LAND},{n:'incoterm',l:'Incoterm',t:'select',req:1,o:INCO_LAND},F.qty,{n:'weight',l:'Weight',t:'text',req:1},F.notes]},
+  'multimodal':{title:'Multi-modal Transport',icon:'layers',tagline:'Door-to-door sea, air and road under one plan.',
+    intro:['Seamless door-to-door movement combining sea, air and road under one coordinated plan and a single point of contact.'],
+    feat:['Combined sea, air and road routing','One coordinator end to end','Optimised cost and transit time','Full through-documentation','Port and inland handling'],
+    formTitle:'Request a Multi-modal Quote',
+    fields:[F.name,F.company,F.email,F.phone,F.desc,F.origin,F.dest,{n:'packing',l:'How is your cargo packed?',t:'select',req:1,o:PACK_SEA},{n:'incoterm',l:'Incoterm',t:'select',req:1,o:INCO_FULL},F.pickup,F.qty,{n:'weight',l:'Weight',t:'text',req:1},F.notes]},
+  'customs-clearance':{title:'Customs Clearance',icon:'doc',tagline:'Full import and export clearance, without delay.',
+    intro:['Full import and export customs clearance, handled by our team so your cargo moves without delay — from declarations and duties to liaison with customs and the port authority.'],
+    feat:['Import and export declarations','Tariff classification and duties','Documentation review','Liaison with customs and port authority','Expedited release'],
+    formTitle:'Request Customs Clearance',
+    fields:[F.name,F.company,F.email,F.phone,{n:'port',l:'Port',t:'text',req:1},F.desc,F.qty,F.notes]},
+  'ship-chandlers':{title:'Ship Chandlers & Suppliers',icon:'box',tagline:'Provisions, stores and supplies to your vessel.',
+    intro:['Provisions, stores, bunkers and technical supplies delivered to your vessel at berth or anchorage, plus crew husbandry and recruitment.'],
+    feat:['Provisions and fresh stores','Deck and engine supplies','Bunkers and refuelling','Spare parts sourcing','Crew husbandry and recruitment'],
+    formTitle:'Request Chandlery / Supplies',
+    fields:[F.name,F.company,F.email,F.phone,{n:'ship',l:'Ship name',t:'text',req:1},{n:'flag',l:'Ship flag',t:'text',req:1},{n:'imo',l:'IMO number',t:'text',req:1},{n:'callport',l:'Calling port',t:'text',req:1},{n:'service',l:'Required service',t:'select',req:1,o:['Refueling','Spare Parts','Maintenance','Crew Husbandry','Crew Recruitment','Other']},{n:'details',l:'Additional details',t:'textarea',req:1,full:1}]},
+  'chartering':{title:'Chartering & Brokerage',icon:'swap',tagline:'Matching cargo with the right tonnage.',
+    intro:['Matching cargo with the right tonnage and negotiating terms on behalf of owners and charterers, with open-ship and open-cargo listings and full fixture support.'],
+    feat:['Vessel and cargo matching','Voyage and time charters','Freight negotiation','Open ships and open cargo listings','Fixture documentation'],
+    formTitle:'Chartering & Brokerage Enquiry',
+    fields:[F.name,F.company,F.email,F.phone,{n:'inqtype',l:'Enquiry type',t:'select',req:1,o:['Cargoes and Tonnage','Open Ships','Open Cargos']},{n:'details',l:'Additional details',t:'textarea',req:1,full:1}]},
+  'shipping-agency':{title:'Shipping & Protective Agency',icon:'anchor',tagline:'Port agency and owner’s protective agency — request a PDA.',
+    intro:['Full port agency and protective (owner’s) agency — representing your interests in port and protecting your vessel throughout its call. Complete the form below to request a Proforma Disbursement Account (PDA).'],
+    feat:['Port agency and husbandry','Protective (owner’s) agency','Crew changes and logistics','Supplies and repairs coordination','24/7 port representation'],
+    formTitle:'PDA Request',
+    fields:[F.name,F.company,F.email,F.phone,{n:'ship',l:'Ship name',t:'text',req:1},{n:'flag',l:'Ship flag',t:'text',req:1},{n:'shiptype',l:'Ship type',t:'select',req:1,o:['General Cargo','RO-RO','Tanker','Others']},{n:'draft',l:'Draft',t:'text',req:1},{n:'nrt',l:'NRT',t:'text',req:1},{n:'grt',l:'GRT',t:'text',req:1},{n:'dwt',l:'DWT',t:'text',req:1},{n:'servicetype',l:'Service type',t:'select',req:1,o:['Agency Services','Protection']},{n:'pol',l:'Port of loading',t:'text',req:1},{n:'pod',l:'Port of discharge',t:'text',req:1},{n:'cargo',l:'Cargo details',t:'textarea',req:1,full:1},{n:'cweight',l:'Cargo weight',t:'text',req:1},{n:'cvolume',l:'Cargo volume',t:'text',req:1},F.notes]}
+};
+
+function esc(s){return s.replace(/"/g,'&quot;');}
+function fieldHTML(f){
+  const req=f.req?' required':'';
+  const star=f.req?' <span class="req">*</span>':'';
+  const full=(f.t==='textarea'||f.full)?' full':'';
+  let input;
+  if(f.t==='select'){
+    input='<select name="'+f.n+'"'+req+'><option value="" disabled selected>Select…</option>'+f.o.map(o=>'<option>'+o+'</option>').join('')+'</select>';
+  } else if(f.t==='textarea'){
+    input='<textarea name="'+f.n+'"'+req+'></textarea>';
+  } else {
+    input='<input type="'+f.t+'" name="'+f.n+'"'+req+'>';
+  }
+  return '<div class="fg'+full+'"><label>'+f.l+star+'</label>'+input+'</div>';
+}
+function getSlug(){
+  const p=new URLSearchParams(location.search).get('s');
+  return (p && SVC[p])?p:'sea-freight';
+}
+function render(){
+  const s=SVC[getSlug()];
+  document.title=s.title+' — Libyan Shipping Agencies Co.';
+  document.getElementById('crumbNow').textContent=s.title;
+  document.getElementById('svcTitle').textContent=s.title;
+  document.getElementById('svcTagline').textContent=s.tagline;
+  document.getElementById('mastIco').innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+ICON[s.icon]+'</svg>';
+  document.getElementById('introBody').innerHTML=s.intro.map(p=>'<p>'+p+'</p>').join('');
+  document.getElementById('featList').innerHTML=s.feat.map(x=>'<li>'+x+'</li>').join('');
+  document.getElementById('formTitle').textContent=s.formTitle;
+  document.getElementById('fieldGrid').innerHTML=s.fields.map(fieldHTML).join('');
+}
+function submitForm(e){
+  e.preventDefault();
+  // Submissions are not yet delivered anywhere — wire an endpoint (Web3Forms/Formspree) or WhatsApp here when ready.
+  document.getElementById('svcForm').style.display='none';
+  document.getElementById('okMsg').style.display='block';
+  window.scrollTo({top:document.getElementById('okMsg').offsetTop-120,behavior:'smooth'});
+  return false;
+}
+document.getElementById('y').textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>

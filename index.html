@@ -87,12 +87,14 @@
 
   /* SERVICES */
   .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-  .svc{padding:34px 28px;border-inline-end:1px solid var(--line);border-bottom:1px solid var(--line);transition:.18s;background:#fff}
+  .svc{display:block;padding:34px 28px;border-inline-end:1px solid var(--line);border-bottom:1px solid var(--line);transition:.18s;background:#fff}
   .svc:hover{background:var(--bg-soft)}
+  .svc:hover .go{color:var(--accent-dk)}
   .svc .ico{width:40px;height:40px;display:grid;place-items:center;margin-bottom:20px;color:var(--accent)}
   .svc .ico svg{width:30px;height:30px}
   .svc h3{font-size:17px;margin-bottom:10px;color:var(--navy)}
   .svc p{font-size:14px;color:var(--muted);line-height:1.65}
+  .svc .go{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--accent)}
   .services-grid .svc:nth-child(4n){border-inline-end:none}
   .services-grid .svc:nth-child(n+5){border-bottom:none}
 
@@ -114,6 +116,11 @@
 
   /* WHY */
   .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 44px}
+  .faq-item{border-top:2px solid var(--navy);padding-top:16px}
+  .faq-item h3{font-size:16px;color:var(--navy);margin-bottom:7px}
+  .faq-item p{font-size:14.5px;color:var(--muted)}
+  @media(max-width:760px){.faq-grid{grid-template-columns:1fr}}
   .why-item{border-top:2px solid var(--navy);padding-top:22px}
   .why-item .wn{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.08em;margin-bottom:12px}
   .why-item h3{font-size:17.5px;margin-bottom:10px;color:var(--navy)}
@@ -278,6 +285,16 @@
   </div>
 </section>
 
+<section class="section about" id="faq" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="faq_eyebrow">FAQ</span>
+      <h2 data-i18n="faq_h2">Frequently asked questions</h2>
+    </div>
+    <div class="faq-grid" id="faqGrid"></div>
+  </div>
+</section>
+
 <section style="padding:0 0 96px">
   <div class="wrap">
     <div class="cta-band">
@@ -377,6 +394,7 @@ const I18N = {
     trust1:"Licensed agency", trust2:"Round-the-clock support", trust3:"Full cargo handling", trust4:"All Libyan ports",
     serv_eyebrow:"What we do", serv_h2:"Complete shipping & logistics services",
     serv_sub:"One partner for every stage of your cargo's journey — from booking to final delivery and clearance.",
+    svc_cta:"Request a quote →",
     about_eyebrow:"About the agency", about_h2:"Experienced hands at every Libyan port",
     about_p1:"Libyan Shipping Agencies Co. was established in 2010 and built by a team with deep roots in the freight forwarding industry. We represent ship owners and charterers, managing their vessels and cargo from arrival to departure.",
     about_p2:"From our base in Misrata we coordinate clearance, supplies and transport nationwide — moving quickly so your vessels never wait longer than they have to.",
@@ -385,6 +403,7 @@ const I18N = {
     about_f3:"Fast, reliable response — 24 hours a day",
     panel1:"Established", panel2:"Support", panel3:"Core service lines", panel4:"Libyan ports",
     why_eyebrow:"Why choose us", why_h2:"Built for owners who need things done right",
+    faq_eyebrow:"FAQ", faq_h2:"Frequently asked questions",
     ctaband_h:"Have a vessel calling at a Libyan port?",
     ctaband_p:"Send us your requirements and we'll respond with a clear quote — fast.",
     ctaband_btn:"Get in touch",
@@ -415,6 +434,14 @@ const I18N = {
       {t:"One point of contact",d:"No chasing between departments — one coordinator owns your shipment end to end."},
       {t:"Port-level knowledge",d:"Years of working Libyan ports and customs means fewer surprises and faster turnarounds."},
       {t:"Clear communication",d:"Straight answers and timely updates, in Arabic or English, at every step of the call."}
+    ],
+    faq:[
+      {q:"What is a shipping agency?",a:"A shipping agency manages vessels and cargo for owners and charterers — handling port formalities, documentation and supplies from arrival to departure."},
+      {q:"Which services do you offer?",a:"Port and protective agency, chartering and brokerage, customs clearance, ship chandling, and sea, air, land and multi-modal freight."},
+      {q:"Are you available 24/7?",a:"Yes — we operate around the clock, every day of the year."},
+      {q:"Do you handle customs clearance?",a:"Yes. We manage full import and export clearance, from declarations and duties to liaison with the authorities."},
+      {q:"What is your service area?",a:"All Libyan ports and the surrounding region, from our base in Misrata."},
+      {q:"How can I reach you?",a:"By phone, WhatsApp or email any time — the details are in the contact section below."}
     ]
   },
   ar:{
@@ -428,6 +455,7 @@ const I18N = {
     trust1:"وكالة مرخصة", trust2:"دعم على مدار الساعة", trust3:"مناولة كاملة للبضائع", trust4:"كل الموانئ الليبية",
     serv_eyebrow:"ماذا نقدم", serv_h2:"خدمات شحن ولوجستيات متكاملة",
     serv_sub:"شريك واحد لكل مرحلة من رحلة بضاعتك — من الحجز حتى التسليم النهائي والتخليص.",
+    svc_cta:"اطلب عرض سعر ←",
     about_eyebrow:"عن الوكالة", about_h2:"خبرة راسخة في كل ميناء ليبي",
     about_p1:"تأسست شركة الوكالات الملاحية الليبية عام 2010 على يد فريق يمتلك جذوراً عميقة في مجال الشحن والتخليص. نمثّل مالكي السفن والمستأجرين، ونتولى إدارة سفنهم وبضائعهم من الوصول حتى المغادرة.",
     about_p2:"من مقرنا في مصراتة ننسّق التخليص والتموين والنقل في جميع أنحاء البلاد — بسرعة تضمن ألا تنتظر سفنك أكثر مما يلزم.",
@@ -436,6 +464,7 @@ const I18N = {
     about_f3:"استجابة سريعة وموثوقة — 24 ساعة يومياً",
     panel1:"تأسست", panel2:"دعم", panel3:"خطوط خدمة أساسية", panel4:"كل الموانئ",
     why_eyebrow:"لماذا نحن", why_h2:"مصمّمة لمن يريد إنجاز الأمور بشكل صحيح",
+    faq_eyebrow:"الأسئلة الشائعة", faq_h2:"أسئلة متكررة",
     ctaband_h:"هل لديك سفينة قادمة إلى ميناء ليبي؟",
     ctaband_p:"أرسل لنا متطلباتك وسنرد عليك بعرض سعر واضح — بسرعة.",
     ctaband_btn:"تواصل معنا",
@@ -466,6 +495,14 @@ const I18N = {
       {t:"نقطة تواصل واحدة",d:"لا تنقّل بين الأقسام — منسّق واحد يتولى شحنتك من البداية إلى النهاية."},
       {t:"معرفة بالموانئ",d:"سنوات من العمل في الموانئ والجمارك الليبية تعني مفاجآت أقل وإنجازاً أسرع."},
       {t:"تواصل واضح",d:"إجابات مباشرة وتحديثات في وقتها، بالعربية أو الإنجليزية، في كل خطوة."}
+    ],
+    faq:[
+      {q:"ما هي الوكالة الملاحية؟",a:"الوكالة الملاحية تدير السفن والبضائع نيابة عن المالكين والمستأجرين — وتتولى الإجراءات المينائية والمستندات والتموين من الوصول حتى المغادرة."},
+      {q:"ما الخدمات التي تقدمونها؟",a:"الوكالة الملاحية والحمائية، تأجير السفن والوساطة، التخليص الجمركي، تموين السفن، والشحن البحري والجوي والبري ومتعدد الوسائط."},
+      {q:"هل أنتم متاحون على مدار الساعة؟",a:"نعم — نعمل على مدار الساعة طوال أيام السنة."},
+      {q:"هل تتولون التخليص الجمركي؟",a:"نعم، نتولى التخليص الكامل للاستيراد والتصدير، من الإقرارات والرسوم حتى التنسيق مع الجهات المختصة."},
+      {q:"ما نطاق خدمتكم؟",a:"جميع الموانئ الليبية والمنطقة المحيطة، انطلاقاً من مقرنا في مصراتة."},
+      {q:"كيف أتواصل معكم؟",a:"عبر الهاتف أو واتساب أو البريد الإلكتروني في أي وقت — التفاصيل في قسم التواصل أدناه."}
     ]
   }
 };
@@ -481,14 +518,16 @@ const svcIcons=[
   '<path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M21 3l-7 7"/><path d="M3 3l7 7"/><path d="M12 22a5 5 0 0 0 5-5c0-2-2-5-5-8-3 3-5 6-5 8a5 5 0 0 0 5 5z"/>',
   '<path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/>'
 ];
+const svcSlugs=['sea-freight','air-freight','land-freight','multimodal','customs-clearance','ship-chandlers','chartering','shipping-agency'];
 
 function renderCards(){
   const d=I18N[LANG];
   document.getElementById('servicesGrid').innerHTML=d.services.map((s,i)=>
-    `<div class="svc"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${svcIcons[i]}</svg></div><h3>${s.t}</h3><p>${s.d}</p></div>`).join('');
+    `<a class="svc" href="service.html?s=${svcSlugs[i]}"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${svcIcons[i]}</svg></div><h3>${s.t}</h3><p>${s.d}</p><span class="go">${d.svc_cta}</span></a>`).join('');
   document.getElementById('whyGrid').innerHTML=d.why.map((s,i)=>
     `<div class="why-item"><div class="wn">0${i+1}</div><h3>${s.t}</h3><p>${s.d}</p></div>`).join('');
   document.getElementById('fService').innerHTML=d.services.map(s=>`<option>${s.t}</option>`).join('');
+  document.getElementById('faqGrid').innerHTML=d.faq.map(f=>`<div class="faq-item"><h3>${f.q}</h3><p>${f.a}</p></div>`).join('');
 }
 function applyLang(){
   const d=I18N[LANG];
