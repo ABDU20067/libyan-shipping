@@ -53,6 +53,7 @@
   .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy);font-size:16px;letter-spacing:-.01em}
   .brand .mark{width:38px;height:38px;background:var(--navy);display:grid;place-items:center;flex-shrink:0;border-radius:4px}
   .brand .mark svg{width:21px;height:21px;color:#fff}
+  .brand-logo{height:46px;width:auto;display:block;flex-shrink:0}
   .nav-links{display:flex;align-items:center;gap:34px}
   .nav-links a{font-weight:500;font-size:15px;color:var(--body);transition:.18s}
   .nav-links a:hover{color:var(--accent)}
@@ -63,8 +64,8 @@
   .burger span{width:24px;height:2px;background:var(--navy);transition:.2s}
 
   /* HERO */
-  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;border-bottom:3px solid var(--accent)}
-  .hero::before{content:"";position:absolute;inset:0;opacity:.5;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+  .hero{position:relative;background:linear-gradient(rgba(12,31,51,.84),rgba(12,31,51,.9)),url("https://images.unsplash.com/photo-1618317497044-cf78ada06f92?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat,var(--navy);color:#fff;overflow:hidden;border-bottom:3px solid var(--accent)}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,31,51,.6),rgba(12,31,51,.15));pointer-events:none}
   .hero-inner{position:relative;z-index:2;padding:104px 0;max-width:760px}
   .hero .kicker{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:#6fb4d8;font-weight:600;margin-bottom:22px;display:flex;align-items:center;gap:12px}
   .hero .kicker::before{content:"";width:34px;height:1px;background:#6fb4d8;display:inline-block}
@@ -103,13 +104,13 @@
   .feat-list{list-style:none;margin-top:26px;display:grid;gap:16px}
   .feat-list li{display:flex;gap:13px;align-items:flex-start;font-weight:500;color:var(--ink);font-size:15.5px}
   .feat-list svg{width:20px;height:20px;color:var(--accent);flex-shrink:0;margin-top:3px}
-  .about-panel{background:var(--navy);border-radius:var(--radius);padding:8px;border-top:3px solid var(--accent)}
-  .panel-grid{display:grid;grid-template-columns:1fr 1fr}
-  .panel-grid .pg{padding:34px 30px;border-bottom:1px solid rgba(255,255,255,.1)}
-  .panel-grid .pg:nth-child(odd){border-inline-end:1px solid rgba(255,255,255,.1)}
-  .panel-grid .pg:nth-child(n+3){border-bottom:none}
-  .panel-grid .pg .n{font-size:32px;font-weight:700;color:#fff;letter-spacing:-.01em}
-  .panel-grid .pg .l{font-size:13.5px;color:#9fb4c6;margin-top:6px;line-height:1.4}
+  .about-media{position:relative;border-radius:var(--radius);overflow:hidden;border-top:3px solid var(--accent);box-shadow:0 20px 50px rgba(12,31,51,.18)}
+  .about-media>img{width:100%;height:100%;min-height:420px;object-fit:cover;display:block}
+  .about-media-bar{position:absolute;bottom:0;inset-inline:0;display:flex;background:rgba(12,31,51,.92)}
+  .about-media-bar>div{flex:1;padding:18px 24px;border-inline-end:1px solid rgba(255,255,255,.12)}
+  .about-media-bar>div:last-child{border:none}
+  .about-media-bar .n{display:block;font-size:26px;font-weight:700;color:#fff;letter-spacing:-.01em}
+  .about-media-bar .l{display:block;font-size:12.5px;color:#9fb4c6;text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
 
   /* WHY */
   .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
@@ -149,6 +150,8 @@
   .foot-brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:17px;margin-bottom:18px}
   .foot-brand .mark{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:4px;display:grid;place-items:center}
   .foot-brand .mark svg{width:19px;height:19px;color:#6fb4d8}
+  .foot-logo{background:#fff;border-radius:5px;padding:6px;display:grid;place-items:center;flex-shrink:0}
+  .foot-logo img{height:34px;width:auto;display:block}
   .foot-col p{font-size:14.5px;max-width:320px;color:rgba(255,255,255,.62)}
   .foot-col h4{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
   .foot-col ul{list-style:none;display:grid;gap:11px}
@@ -187,7 +190,7 @@
 <header>
   <div class="wrap nav">
     <a href="#home" class="brand">
-      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2c1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10V2"/></svg></span>
+      <img class="brand-logo" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=240,fit=crop/AQEe7PyvMNUG5OR0/logo700ppi-07-A3QlqVQ8wPUkNyP1.webp" alt="Libyan Shipping Agencies Co. logo">
       <span data-i18n="brand">Libyan Shipping Agencies</span>
     </a>
     <nav class="nav-links" id="navLinks">
@@ -254,12 +257,12 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="about_f3">Fast, reliable response — 24 hours a day</span></li>
       </ul>
     </div>
-    <div class="about-panel">
-      <div class="panel-grid">
-        <div class="pg"><div class="n">2010</div><div class="l" data-i18n="panel1">Year established</div></div>
-        <div class="pg"><div class="n">24/7</div><div class="l" data-i18n="panel2">Operational support</div></div>
-        <div class="pg"><div class="n">8</div><div class="l" data-i18n="panel3">Core service lines</div></div>
-        <div class="pg"><div class="n">All</div><div class="l" data-i18n="panel4">Libyan ports covered</div></div>
+    <div class="about-media">
+      <img src="https://images.unsplash.com/photo-1666291631431-85cd843669ee?auto=format&fit=crop&w=1200&q=80" alt="Shipping agency team coordinating vessel operations at a busy port" loading="lazy">
+      <div class="about-media-bar">
+        <div><span class="n">2010</span><span class="l" data-i18n="panel1">Established</span></div>
+        <div><span class="n">24/7</span><span class="l" data-i18n="panel2">Support</span></div>
+        <div><span class="n">All</span><span class="l" data-i18n="panel4">Libyan ports</span></div>
       </div>
     </div>
   </div>
@@ -328,7 +331,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col">
-        <div class="foot-brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2c1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10V2"/></svg></span><span data-i18n="brand">Libyan Shipping Agencies</span></div>
+        <div class="foot-brand"><span class="foot-logo"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=160,fit=crop/AQEe7PyvMNUG5OR0/logo700ppi-07-A3QlqVQ8wPUkNyP1.webp" alt="Libyan Shipping Agencies Co. logo"></span><span data-i18n="brand">Libyan Shipping Agencies</span></div>
         <p data-i18n="foot_about">Full-service shipping agency based in Misrata, Libya. Representing ship owners and charterers with reliable, round-the-clock cargo handling since 2010.</p>
         <div class="socials">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
@@ -380,7 +383,7 @@ const I18N = {
     about_f1:"Local expertise across Libyan ports and customs",
     about_f2:"A single point of contact for owners and charterers",
     about_f3:"Fast, reliable response — 24 hours a day",
-    panel1:"Year established", panel2:"Operational support", panel3:"Core service lines", panel4:"Libyan ports covered",
+    panel1:"Established", panel2:"Support", panel3:"Core service lines", panel4:"Libyan ports",
     why_eyebrow:"Why choose us", why_h2:"Built for owners who need things done right",
     ctaband_h:"Have a vessel calling at a Libyan port?",
     ctaband_p:"Send us your requirements and we'll respond with a clear quote — fast.",
@@ -431,7 +434,7 @@ const I18N = {
     about_f1:"خبرة محلية في الموانئ والجمارك الليبية",
     about_f2:"نقطة تواصل واحدة للمالكين والمستأجرين",
     about_f3:"استجابة سريعة وموثوقة — 24 ساعة يومياً",
-    panel1:"سنة التأسيس", panel2:"دعم تشغيلي", panel3:"خطوط خدمة أساسية", panel4:"تغطية الموانئ الليبية",
+    panel1:"تأسست", panel2:"دعم", panel3:"خطوط خدمة أساسية", panel4:"كل الموانئ",
     why_eyebrow:"لماذا نحن", why_h2:"مصمّمة لمن يريد إنجاز الأمور بشكل صحيح",
     ctaband_h:"هل لديك سفينة قادمة إلى ميناء ليبي؟",
     ctaband_p:"أرسل لنا متطلباتك وسنرد عليك بعرض سعر واضح — بسرعة.",
